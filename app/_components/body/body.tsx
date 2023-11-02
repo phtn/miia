@@ -13,7 +13,7 @@ const Body = () => {
 	return (
 		<>
 			<Landing scrollToFeature={scrollToFeature} />
-			<Feature featureRef={featureRef} />
+			{/* <Feature featureRef={featureRef} /> */}
 		</>
 	)
 }

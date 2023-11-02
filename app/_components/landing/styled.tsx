@@ -4,7 +4,7 @@ import tw from 'tailwind-styled-components'
 const BodyContainer = tw.div`
   flex
   flex-col
-  bg-[url('/images/lobby-dark.jpg')]
+  bg-[url('/images/sydney-v1.jpg')]
   bg-cover
   h-screen
   w-full
@@ -12,15 +12,14 @@ const BodyContainer = tw.div`
 
 const HeroContainer = tw.div`
   flex
-  items-center
+  items-end
   justify-center
-  h-[calc(100vh-50%)]
-  md:h-[calc(100vh-10%)]
+  h-[calc(100vh-40%)]
+  md:h-[calc(100vh-65%)]
   w-full
 `
 
 const HeroContent = tw.section`
-  h-56
   flex
   flex-col
   items-center
@@ -34,7 +33,7 @@ const HeroPrimary = tw.div`
   flex
   items-center
   bg-accent
-  skew-x-[8deg]
+  skew-x-[-16deg]
   px-10
   md:h-24
   md:px-0
@@ -51,7 +50,7 @@ const HeroSecondary = tw.div`
   items-center
   justify-between
   bg-foreground
-  skew-x-[8deg]
+  skew-x-[-16deg]
   px-6
   border-accent
   md:h-16
@@ -63,7 +62,7 @@ const HeroSecondary = tw.div`
 
 `
 const HeroLabelContainer = tw.div`
-  skew-x-[-15deg]
+  skew-x-[16deg]
   flex
 `
 
@@ -76,10 +75,11 @@ const PrimaryLabel = tw.h2`
 
 const SecondaryLabel = tw.h2`
   text-accent
-  md:text-[2rem]
-  font-thin
+  md:text-[1.5rem]
+  font-medium
   px-6
-  md:px-16
+  md:px-6
+  uppercase
 `
 
 const Ornament = tw.div`
@@ -96,13 +96,35 @@ const Ornament = tw.div`
 
 const ActionContainer = tw.section`
   flex
-  h-[calc(100vh-90%)]
   items-center
   justify-center
   w-full
+  py-12
 `
 
 const ActionButton = tw(Button) <ButtonProps>`
 `
 
-export { ActionButton, ActionContainer, BodyContainer, HeroContainer, HeroContent, HeroPrimary, HeroLabelContainer, HeroSecondary, PrimaryLabel, SecondaryLabel, Ornament, }
+const WidgetContainer = tw.div`
+  flex
+  items-end
+  justify-end
+  md:h-[calc(100vh-52%)]
+  py-3
+  px-4
+`
+
+export {
+  ActionButton,
+  ActionContainer,
+  BodyContainer,
+  HeroContainer,
+  HeroContent,
+  HeroPrimary,
+  HeroLabelContainer,
+  HeroSecondary,
+  PrimaryLabel,
+  SecondaryLabel,
+  Ornament,
+  WidgetContainer,
+}

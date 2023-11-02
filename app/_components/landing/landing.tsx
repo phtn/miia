@@ -1,22 +1,18 @@
 import { Button } from "@/components/ui/button"
-import { TrophyIcon } from "../icons/custom-icons"
-import { ActionContainer, BodyContainer, HeroContainer, HeroContent, HeroLabelContainer, HeroPrimary, HeroSecondary, Ornament, PrimaryLabel, SecondaryLabel } from "./styled"
+import { ActionContainer, BodyContainer, HeroContainer, HeroContent, HeroLabelContainer, HeroPrimary, HeroSecondary, Ornament, PrimaryLabel, SecondaryLabel, WidgetContainer } from "./styled"
 import { ArrowDownCircleIcon } from "lucide-react"
+import { motion } from "framer-motion"
+import { ActionProps, LandingProps } from "./types"
 
 
-type LandingProps = {
-  scrollToFeature: () => void
-}
 
-type ActionProps = {
-  onClick: () => void
-}
 
 const Landing = ({ scrollToFeature }: LandingProps) => {
   return (
     <BodyContainer>
       <Hero />
       <Action onClick={scrollToFeature} />
+      <WidgetModule />
     </BodyContainer>
   )
 }
@@ -25,24 +21,29 @@ const Hero = () => {
   return (
     <HeroContainer>
       <HeroContent>
-        <HeroPrimary>
-          <HeroLabelContainer>
-            <PrimaryLabel>Enter the Realm of</PrimaryLabel>
-          </HeroLabelContainer>
-        </HeroPrimary>
-        <HeroSecondary>
-          <Ornament>
-            <TrophyIcon size={14} />
-          </Ornament>
-          <HeroLabelContainer>
-            <SecondaryLabel>The Finest Privilege</SecondaryLabel>
-          </HeroLabelContainer>
+        <motion.div
+          initial={{ opacity: 0, x: -75 }}
+          animate={{ opacity: 1, x: -25 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        >
+          <HeroPrimary>
+            <HeroLabelContainer>
+              <PrimaryLabel>You can make it</PrimaryLabel>
+            </HeroLabelContainer>
+          </HeroPrimary>
+        </motion.div>
 
-          <Ornament>
-            <TrophyIcon size={14} />
-          </Ornament>
-
-        </HeroSecondary>
+        <motion.div
+          initial={{ opacity: 0, x: 75 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        >
+          <HeroSecondary>
+            <HeroLabelContainer>
+              <SecondaryLabel>in Australia</SecondaryLabel>
+            </HeroLabelContainer>
+          </HeroSecondary>
+        </motion.div>
       </HeroContent>
     </HeroContainer>
   )
@@ -51,11 +52,37 @@ const Hero = () => {
 const Action = ({ onClick }: ActionProps) => {
   return (
     <ActionContainer>
-      <Button variant='primary' size='fat' onClick={onClick}>
-        <span className="text-accet pr-20"> Explore</span>
-        <ArrowDownCircleIcon className="h-7 w-7 text-card" />
-      </Button>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.6, }}
+        animate={{ opacity: 1, scale: 1, }}
+        transition={{ duration: 0.2, delay: 1 }}
+      >
+        <Button variant='secondary' size='fat' onClick={onClick}>
+          <span className="text-foreground pr-20"> Explore</span>
+          <ArrowDownCircleIcon className="h-7 w-7 text-foreground stroke-[1.5px]" />
+        </Button>
+      </motion.div>
     </ActionContainer>
+  )
+}
+
+const WidgetModule = () => {
+  return (
+    <motion.div
+      className="flex items-end justify-end md:h-[calc(100vh-52%)] py-3 px-4"
+      initial={{ opacity: 0, x: 300, }}
+      animate={{ opacity: 1, x: 0, }}
+      transition={{ duration: 0.2, delay: 1.2 }}
+    >
+
+
+      <div className="flex backdrop-blur-md bg-foreground/25 h-32 w-44 rounded-lg ml-4 items-center justify-center">
+        <span className="text-secondary text-lg font-bold bg-foreground px-4">Widget - 1</span>
+      </div>
+      <div className="flex backdrop-blur-md bg-foreground/25 h-32 w-44 rounded-lg ml-4 items-center justify-center">
+        <span className="text-secondary text-lg font-bold bg-foreground px-4">Widget - 2</span>
+      </div>
+    </motion.div>
   )
 }
 export default Landing
