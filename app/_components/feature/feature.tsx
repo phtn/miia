@@ -38,7 +38,7 @@ const TopPanel = () => {
 		if (isInView) {
 			animate(scope.current, { height: 500 }, { duration: 1.2, delay: 0.5 })
 		}
-	}, [isInView])
+	}, [isInView, animate, scope])
 
 	return (
 		<TopSection>

@@ -6,8 +6,8 @@ import { ThemeProvider } from '@/components/theme-provider'
 
 
 export const metadata: Metadata = {
-  title: 'OnlyMembers',
-  description: 'A Members Only Club',
+  title: 'Make it in Australia',
+  description: '',
 }
 
 export default function RootLayout({
