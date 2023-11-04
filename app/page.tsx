@@ -1,12 +1,3 @@
 import Body from "./_components/body/body"
-
-const Home = () => {
-
-  return (
-    <Body />
-  )
-}
-
-
-
+const Home = () => <Body />
 export default Home

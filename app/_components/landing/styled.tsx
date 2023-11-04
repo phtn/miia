@@ -5,7 +5,9 @@ const BodyContainer = tw.div`
   flex
   flex-col
   bg-[url('/images/sydney-v1.jpg')]
-  bg-cover
+  md:bg-cover
+  bg-contain
+  bg-no-repeat
   h-screen
   w-full
 `
@@ -14,7 +16,7 @@ const HeroContainer = tw.div`
   flex
   items-end
   justify-center
-  h-[calc(100vh-40%)]
+  h-[calc(100vh-65%)]
   md:h-[calc(100vh-65%)]
   w-full
 `
@@ -28,11 +30,13 @@ const HeroContent = tw.section`
 `
 
 const HeroPrimary = tw.div`
-  animate-in
-  h-12
+  h-10
   flex
+  animate-in
   items-center
-  bg-accent
+  bg-gradient-to-br
+  from-accent
+  to-accent
   skew-x-[-16deg]
   px-10
   md:h-24
@@ -41,15 +45,17 @@ const HeroPrimary = tw.div`
   md:hover:px-16
   transition-all
   duration-1000
+  backdrop-blur-md
 `
 
 const HeroSecondary = tw.div`
   animate-in
-  h-12
+  h-8s
   flex
   items-center
   justify-between
   bg-foreground
+  md:bg-foreground
   skew-x-[-16deg]
   px-6
   border-accent
@@ -58,8 +64,6 @@ const HeroSecondary = tw.div`
   md:hover:px-32
   transition-all
   duration-1000
-  
-
 `
 const HeroLabelContainer = tw.div`
   skew-x-[16deg]
@@ -68,18 +72,18 @@ const HeroLabelContainer = tw.div`
 
 const PrimaryLabel = tw.h2`
   text-foreground
-  text-xl
+  text-md
   font-extrabold
   md:text-[3.5rem]
 `
 
 const SecondaryLabel = tw.h2`
   text-accent
+  text-sm
+  py-1
   md:text-[1.5rem]
-  font-medium
   px-6
   md:px-6
-  uppercase
 `
 
 const Ornament = tw.div`
@@ -102,29 +106,31 @@ const ActionContainer = tw.section`
   py-12
 `
 
-const ActionButton = tw(Button) <ButtonProps>`
+const ActionButton = tw(Button)<ButtonProps>`
 `
 
 const WidgetContainer = tw.div`
   flex
   items-end
   justify-end
+  h-[calc(100vh)]
   md:h-[calc(100vh-52%)]
   py-3
   px-4
+  border
 `
 
 export {
-  ActionButton,
-  ActionContainer,
-  BodyContainer,
-  HeroContainer,
-  HeroContent,
-  HeroPrimary,
-  HeroLabelContainer,
-  HeroSecondary,
-  PrimaryLabel,
-  SecondaryLabel,
-  Ornament,
-  WidgetContainer,
+	ActionButton,
+	ActionContainer,
+	BodyContainer,
+	HeroContainer,
+	HeroContent,
+	HeroPrimary,
+	HeroLabelContainer,
+	HeroSecondary,
+	PrimaryLabel,
+	SecondaryLabel,
+	Ornament,
+	WidgetContainer,
 }
