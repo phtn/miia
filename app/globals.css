@@ -21,6 +21,11 @@ Light
 #F9F9F9
 0 0& 98%
 
+hsl(11, 100%, 59%)
+hsl(11, 100%, 70%)
+hsl(41,100%,58%)
+hsl(249,37%,76%)
+hsl(51,100%,78%)
 */
 
 @layer base {
@@ -34,7 +39,7 @@ Light
 		--popover: 198 46% 88%;
 		--popover-foreground: 222.2 84% 4.9%;
 
-		--primary: 67 99% 49%;
+		--primary: 194 46%, 88%;
 		--primary-foreground: 222.2 84% 4.9%;
 
 		--secondary: 198 46% 88%;
@@ -43,14 +48,14 @@ Light
 		--muted: 210 40% 96.1%;
 		--muted-foreground: 215.4 16.3% 46.9%;
 
-		--accent: 67 97% 49%;
+		--accent: 194 46%, 88%;
 		--accent-foreground: 222.2 84% 4.9%;
 
 		--destructive: 0 84.2% 60.2%;
 		--destructive-foreground: 210 40% 98%;
 
 		--border: 214.3 31.8% 91.4%;
-		--input: 67 97% 49%;
+		--input: 194 46%, 88%;
 		--ring: 222.2 84% 4.9%;
 
 		--radius: 0.5rem;

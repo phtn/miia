@@ -73,6 +73,7 @@ const HeroLabelContainer = tw.div`
 const PrimaryLabel = tw.h2`
   text-foreground
   text-md
+  tracking-tight
   font-extrabold
   md:text-[3.5rem]
 `

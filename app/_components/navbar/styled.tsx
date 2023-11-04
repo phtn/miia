@@ -32,6 +32,7 @@ const BrandPrimary = tw.h1`
   skew-x-[-16deg]
   bg-foreground 
   rounded-md
+  md:rounded-none
   md:px-3
   md:py-2
   px-1
