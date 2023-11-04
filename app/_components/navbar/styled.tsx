@@ -64,9 +64,10 @@ const MenuListItem = tw.div`
   duration-700
   transition-all
   skew-x-[-16deg]
-  hover:text-accent
+  hover:text-background
   hover:bg-foreground 
-  dark:text-background
+  dark:text-accent
+  dark:hover:text-background
 `
 
 type MenuItemProps = {

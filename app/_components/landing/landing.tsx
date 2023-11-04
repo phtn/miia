@@ -12,7 +12,7 @@ import {
 	SecondaryLabel,
 	WidgetContainer,
 } from './styled'
-import { ArrowDownCircleIcon } from 'lucide-react'
+import { ArrowDownCircleIcon, ArrowRightCircleIcon } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { ActionProps, LandingProps } from './types'
 
@@ -66,8 +66,8 @@ const Action = ({ onClick }: ActionProps) => {
 					variant='secondary'
 					size='fat'
 					onClick={onClick}>
-					<span className='text-foreground pr-20'> Explore</span>
-					<ArrowDownCircleIcon className='h-7 w-7 text-foreground stroke-[1.5px]' />
+					<span className='text-foreground pr-6 '>Sign up today</span>
+					<ArrowRightCircleIcon className='h-7 w-7 text-foreground stroke-[1.5px]' />
 				</Button>
 			</motion.div>
 		</ActionContainer>
