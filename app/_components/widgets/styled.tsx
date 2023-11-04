@@ -40,4 +40,5 @@ const SecondaryLabel = tw.div`
   uppercase
   tracking-widest
 `
+
 export { PrimaryPaint, PrimaryLabel, SecondaryLabel, SecondaryPaint }

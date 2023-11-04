@@ -5,7 +5,7 @@ const NavContainer = tw.div`
   flex
   w-full
   px-3
-  py-10
+  py-6
   lg:p-10
   absolute
   items-center 
@@ -31,7 +31,7 @@ const BrandName = tw.header`
 const BrandPrimary = tw.h1`
   skew-x-[-16deg]
   bg-foreground 
-  rounded-md
+  rounded-sm
   md:rounded-none
   md:px-3
   md:py-2
@@ -67,7 +67,11 @@ const MenuListItem = tw.div`
   hover:text-background
   hover:bg-foreground 
   dark:text-accent
-  dark:hover:text-background
+  dark:hover:text-foreground
+  dark:hover:bg-background/60
+  dark:backdrop-blur-xl
+  dark:bg-background/50
+
 `
 
 type MenuItemProps = {

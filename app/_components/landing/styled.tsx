@@ -6,7 +6,7 @@ const BodyContainer = tw.div`
   flex-col
   bg-[url('/images/sydney-v1.jpg')]
   md:bg-cover
-  bg-contain
+  bg-[length:600px_400px]
   bg-no-repeat
   h-screen
   w-full
@@ -16,8 +16,7 @@ const HeroContainer = tw.div`
   flex
   items-end
   justify-center
-  h-[calc(100vh-65%)]
-  md:h-[calc(100vh-65%)]
+  h-full
   w-full
 `
 
@@ -63,7 +62,7 @@ const HeroSecondary = tw.div`
   md:px-24
   md:hover:px-32
   transition-all
-  duration-1000
+  duration-500
 `
 const HeroLabelContainer = tw.div`
   skew-x-[16deg]
@@ -104,7 +103,7 @@ const ActionContainer = tw.section`
   items-center
   justify-center
   w-full
-  py-12
+  py-10
 `
 
 const ActionButton = tw(Button)<ButtonProps>`
@@ -114,11 +113,10 @@ const WidgetContainer = tw.div`
   flex
   items-end
   justify-end
-  h-[calc(100vh)]
-  md:h-[calc(100vh-52%)]
+  h-full
   py-3
   px-4
-  border
+  overflow-hidden
 `
 
 export {
