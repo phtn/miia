@@ -41,9 +41,9 @@ const HeroPrimary = tw.div`
   md:h-24
   md:px-0
   flex-nowrap
-  md:hover:px-16
+  md:hover:px-8
   transition-all
-  duration-1000
+  duration-700
   backdrop-blur-md
 `
 
@@ -60,7 +60,7 @@ const HeroSecondary = tw.div`
   border-accent
   md:h-16
   md:px-24
-  md:hover:px-32
+  md:hover:px-28
   transition-all
   duration-500
 `

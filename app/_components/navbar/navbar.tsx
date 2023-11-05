@@ -75,9 +75,7 @@ const ToggleMode = () => {
 	const { checked, toggleMode } = useToggleMode()
 	return (
 		<div className='flex items-center justify-center'>
-			<span className='text-xs bg-background px-2 py-1 rounded-full'>
-				color modes
-			</span>
+			<span className='text-xs bg-background px-2 py-1 rounded-full'>try</span>
 			<ArrowRight className='h-4 w-4 dark:text-background mx-1' />
 			<Switch
 				checked={checked}

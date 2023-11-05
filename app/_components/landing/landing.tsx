@@ -17,6 +17,7 @@ import {
 	ArrowRightCircleIcon,
 	MessageCircleIcon,
 	MessageSquareIcon,
+	MessagesSquareIcon,
 } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { ActionProps, LandingProps } from './types'
@@ -142,11 +143,12 @@ const ChatModule = () => {
 				</li>
 			</ul>{' '}
 			<motion.button
-				className='w-56 py-4 px-8 bg-accent mr-16 mb-16 mt-2 flex items-center justify-between rounded-lg'
+				className='w-32 py-4 px-6 bg-accent border-[0.5px] border-foreground/5 drop-shadow-lg backdrop-blur-sm mr-16 mb-14 mt-2 flex items-center justify-between rounded-lg'
 				whileTap={{ scale: 0.97 }}
 				onClick={() => setIsOpen(!isOpen)}>
-				Chat with us
-				<MessageCircleIcon />
+				<span className='text-lg text-foreground font-bold'>Chat</span>
+
+				<MessagesSquareIcon className='text-foreground/50' />
 			</motion.button>
 		</div>
 	)
